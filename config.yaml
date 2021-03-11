@@ -17,25 +17,27 @@ settings:
 monitors:
   - id: web
     name: Website
-    description: "My website. Self explanatory, innit?"
+    description: 'My website. Self explanatory, innit?'
     url: 'https://www.bean.codes/'
     method: GET
     expectStatus: 200
-    
+    followRedirect: true
+
   - id: cdn
     name: CDN
-    description: "The content delivery network. Important files are stored here, in addition to public screenshots."
+    description: 'The content delivery network. Important files are stored here, in addition to public screenshots.'
     url: 'https://cdn.bean.codes/'
     method: GET
     expectStatus: 200
-    
+    followRedirect: true
+
   - id: ci # unique identifier
     name: GitLab CI
-    description: "CI, powered by GitLab. Used to test projects and random things, in addition to other things used privately." # default=empty
+    description: 'CI, powered by GitLab. Used to test projects and random things, in addition to other things used privately.' # default=empty
     url: 'https://ci.bean.codes/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
-    followRedirect: false # should fetch follow redirects, default=false
+    followRedirect: true # should fetch follow redirects, default=false
 
   - id: ptero
     name: Pterodactyl
@@ -43,3 +45,4 @@ monitors:
     url: 'https://dedi.bean.codes'
     method: GET
     expectStatus: 200
+    followRedirect: true
