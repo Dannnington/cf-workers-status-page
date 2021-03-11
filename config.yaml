@@ -41,8 +41,16 @@ monitors:
 
   - id: ptero
     name: Pterodactyl
-    description: 'The panel used for managing services like the CDN or Hastebin. Powered by Pterodactyl'
+    description: 'The panel used for managing services like the CDN or Hastebin. Powered by Pterodactyl.'
     url: 'https://dedi.bean.codes'
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+
+  - id: haste
+    name: Hastebin
+    description: 'A publicly-available Hastebin instance. No reason why this exists.'
+    url: 'https://haste.bean.codes'
     method: GET
     expectStatus: 200
     followRedirect: true
