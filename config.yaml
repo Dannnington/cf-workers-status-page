@@ -39,18 +39,26 @@ monitors:
     expectStatus: 200 # operational status, default=200
     followRedirect: true # should fetch follow redirects, default=false
 
-  - id: ptero
-    name: Pterodactyl
-    description: 'The panel used for managing services like the CDN or Hastebin. Powered by Pterodactyl.'
-    url: 'https://dedi.bean.codes'
-    method: GET
-    expectStatus: 200
-    followRedirect: true
-
   - id: haste
     name: Hastebin
     description: 'A publicly-available Hastebin instance. No reason why this exists.'
     url: 'https://haste.bean.codes'
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+
+  - id: orion
+    name: Skynode Orion (Flagship Server)
+    description: 'The primary server in the Skynode cluster, self-hosted. This hosts the Pterodactyl panel, the GitLab CI, the Hastebin, and the CDN.'
+    url: 'https://dedi.bean.codes'
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+  
+  - id: hydra
+    name: Skynode Hydra
+    description: 'A server in the Skynode cluster, hosted within OVH's Hillsboro datacentre in Oregon. This hosts my website.'
+    url: 'https://skynode-hydra-wings.bean.codes/'
     method: GET
     expectStatus: 200
     followRedirect: true
